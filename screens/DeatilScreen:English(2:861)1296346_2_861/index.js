@@ -1,35 +1,16 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_862}>
         <Text style={styles.Text_2_862}>
@@ -66,20 +47,12 @@ export class Blank extends React.Component {
         <View style={styles.View_I2_864_10_4}>
           <View style={styles.View_I2_864_10_5}>
             <View style={styles.View_I2_864_10_6}>
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/45a8f49a-70fe-4f23-9544-342b32e0512e"
-                }}
-                style={styles.ImageBackground_I2_864_10_7}
-              />
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3687b5d6-1ce0-49e4-9e90-a7ea92556b4b"
-                }}
-                style={styles.ImageBackground_I2_864_10_10}
-              />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/45a8f49a-70fe-4f23-9544-342b32e0512e"
+            }} style={styles.ImageBackground_I2_864_10_7} />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3687b5d6-1ce0-49e4-9e90-a7ea92556b4b"
+            }} style={styles.ImageBackground_I2_864_10_10} />
             </View>
             <View style={styles.View_I2_864_10_11} />
           </View>
@@ -89,31 +62,26 @@ export class Blank extends React.Component {
             <View style={styles.View_I2_864_10_15} />
             <View style={styles.View_I2_864_10_16} />
           </View>
-          <ImageBackground
-            source={{
-              uri:
-                "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d483b46f-e2a5-4eed-bc2c-7532ea82c3af"
-            }}
-            style={styles.ImageBackground_I2_864_10_17}
-          />
+          <ImageBackground source={{
+          uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d483b46f-e2a5-4eed-bc2c-7532ea82c3af"
+        }} style={styles.ImageBackground_I2_864_10_17} />
         </View>
       </View>
       <View style={styles.View_2_865}>
         <Text style={styles.Text_2_865}>vacillate</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94ec5a3d-cc1b-49a9-8acb-14ea7f5d09ce"
-        }}
-        style={styles.ImageBackground_2_866}
-      />
-    </ScrollView>
-  )
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94ec5a3d-cc1b-49a9-8acb-14ea7f5d09ce"
+    }} style={styles.ImageBackground_2_866} />
+    </ScrollView>;
 }
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("177%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("177%")
+  },
   View_2_862: {
     width: wp("84%"),
     minWidth: wp("84%"),
@@ -343,11 +311,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: wp("0%")
   }
-})
+});
+
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

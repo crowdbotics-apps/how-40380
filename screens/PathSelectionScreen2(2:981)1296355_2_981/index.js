@@ -1,46 +1,23 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_982}>
         <Text style={styles.Text_2_982}>Preparing for a test</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/464dae97-ddc2-461a-a117-60f5c3defaf8"
-        }}
-        style={styles.ImageBackground_2_983}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/464dae97-ddc2-461a-a117-60f5c3defaf8"
+    }} style={styles.ImageBackground_2_983} />
       <View style={styles.View_2_984} />
       <View style={styles.View_2_985} />
       <View style={styles.View_2_986} />
@@ -61,20 +38,12 @@ export class Blank extends React.Component {
       <View style={styles.View_2_993}>
         <Text style={styles.Text_2_993}>SAT</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/372ae2c4-2930-411e-a9db-43626d58b879"
-        }}
-        style={styles.ImageBackground_2_994}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a728b049-186e-43f7-aaa1-7517873cf263"
-        }}
-        style={styles.ImageBackground_2_995}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/372ae2c4-2930-411e-a9db-43626d58b879"
+    }} style={styles.ImageBackground_2_994} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a728b049-186e-43f7-aaa1-7517873cf263"
+    }} style={styles.ImageBackground_2_995} />
       <View style={styles.View_2_996}>
         <Text style={styles.Text_2_996}>Learning new words</Text>
       </View>
@@ -96,13 +65,15 @@ export class Blank extends React.Component {
           in the settings.
         </Text>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("115%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("115%")
+  },
   View_2_982: {
     width: wp("66%"),
     minWidth: wp("66%"),
@@ -458,12 +429,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

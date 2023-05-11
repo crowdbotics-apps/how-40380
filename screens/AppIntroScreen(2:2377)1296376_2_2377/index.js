@@ -1,35 +1,17 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_2378}>
         <Text style={styles.Text_2_2378}>noun.vocabulary learning app</Text>
@@ -40,13 +22,9 @@ export class Blank extends React.Component {
           Words is here to make learning new words fun!
         </Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/82c7c2ce-53fe-4902-a888-e38cc9edfe52"
-        }}
-        style={styles.ImageBackground_2_2380}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/82c7c2ce-53fe-4902-a888-e38cc9edfe52"
+    }} style={styles.ImageBackground_2_2380} />
       <View style={styles.View_2_2381}>
         <Text style={styles.Text_2_2381}>Similar: None</Text>
       </View>
@@ -58,47 +36,30 @@ export class Blank extends React.Component {
           व्यक्ति/विषय को अति-प्रभावित करना
         </Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8072e20c-4746-490d-821e-5c08801c3871"
-        }}
-        style={styles.TouchableOpacity_2_2384}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2345"))
-        }
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a1f799a1-1202-40fb-aa6d-93e8e1dcabd6"
-        }}
-        style={styles.ImageBackground_2_2385}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/90c16825-e5d9-4fdf-a4a3-f6ef41ddc526"
-        }}
-        style={styles.ImageBackground_2_2386}
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8072e20c-4746-490d-821e-5c08801c3871"
+    }} style={styles.TouchableOpacity_2_2384} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2345"))} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a1f799a1-1202-40fb-aa6d-93e8e1dcabd6"
+    }} style={styles.ImageBackground_2_2385} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/90c16825-e5d9-4fdf-a4a3-f6ef41ddc526"
+    }} style={styles.ImageBackground_2_2386} />
       <View style={styles.View_2_2387}>
         <Text style={styles.Text_2_2387}>High On Words (HOW)</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f319d01a-55bf-4ccc-8cb7-b177bbfd6ea4"
-        }}
-        style={styles.ImageBackground_2_2388}
-      />
-    </ScrollView>
-  )
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f319d01a-55bf-4ccc-8cb7-b177bbfd6ea4"
+    }} style={styles.ImageBackground_2_2388} />
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("115%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("115%")
+  },
   View_2_2378: {
     width: wp("83%"),
     top: hp("77%"),
@@ -253,12 +214,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: wp("7%")
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

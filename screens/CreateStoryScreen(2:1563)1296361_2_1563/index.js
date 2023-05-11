@@ -1,81 +1,39 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fefdbccc-0765-46be-95d3-710ae6ef4ac3"
-        }}
-        style={styles.TouchableOpacity_2_1564}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1492"))
-        }
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fefdbccc-0765-46be-95d3-710ae6ef4ac3"
+    }} style={styles.TouchableOpacity_2_1564} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1492"))} />
       <View style={styles.View_2_1567}>
         <Text style={styles.Text_2_1567}>Create Story</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7a64363f-af22-4381-b41e-6e9b5ffdc644"
-        }}
-        style={styles.ImageBackground_2_1568}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cdb00785-da7c-4f9e-8eb7-0109e40f0663"
-        }}
-        style={styles.ImageBackground_2_1569}
-      />
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_1570}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1524"))
-        }
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7a64363f-af22-4381-b41e-6e9b5ffdc644"
+    }} style={styles.ImageBackground_2_1568} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cdb00785-da7c-4f9e-8eb7-0109e40f0663"
+    }} style={styles.ImageBackground_2_1569} />
+      <TouchableOpacity style={styles.TouchableOpacity_2_1570} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1524"))} />
       <View style={styles.View_2_1571}>
         <Text style={styles.Text_2_1571}>Let’s Go!</Text>
       </View>
       <View style={styles.View_2_1572} />
       <View style={styles.View_2_1573} />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cd01edd5-5fa6-4285-a3a2-5d6a0944fd3c"
-        }}
-        style={styles.ImageBackground_2_1574}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cd01edd5-5fa6-4285-a3a2-5d6a0944fd3c"
+    }} style={styles.ImageBackground_2_1574} />
       <View style={styles.View_2_1576}>
         <Text style={styles.Text_2_1576}>Theme:</Text>
       </View>
@@ -95,13 +53,15 @@ export class Blank extends React.Component {
       <View style={styles.View_2_1582}>
         <Text style={styles.Text_2_1582}>loquacious</Text>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(48, 48, 48, 1)" },
-  View_2: { height: hp("100%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(48, 48, 48, 1)"
+  },
+  View_2: {
+    height: hp("100%")
+  },
   TouchableOpacity_2_1564: {
     width: wp("7%"),
     minWidth: wp("7%"),
@@ -356,12 +316,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

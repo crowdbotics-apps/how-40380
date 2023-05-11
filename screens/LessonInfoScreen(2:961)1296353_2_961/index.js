@@ -1,86 +1,47 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_962}>
         <Text style={styles.Text_2_962}>(adj.) to be indecisive about</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ba6eccee-2fe9-4740-bd82-38441d163530"
-        }}
-        style={styles.ImageBackground_2_963}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ba6eccee-2fe9-4740-bd82-38441d163530"
+    }} style={styles.ImageBackground_2_963} />
       <View style={styles.View_2_964}>
         <Text style={styles.Text_2_964}>Lesson 1</Text>
       </View>
       <View style={styles.View_2_965}>
         <Text style={styles.Text_2_965}>(adj.) to be indecisive about</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/540d00d8-4cc3-4277-8f85-9142a72b6f7f"
-        }}
-        style={styles.ImageBackground_2_966}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/540d00d8-4cc3-4277-8f85-9142a72b6f7f"
+    }} style={styles.ImageBackground_2_966} />
       <View style={styles.View_2_967}>
         <Text style={styles.Text_2_967}>(adj.) to be indecisive about</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a5a1ebfb-bc55-4754-a670-f1714ed95e4e"
-        }}
-        style={styles.ImageBackground_2_968}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fedeb553-8332-47d4-82c0-bb1c7d261bf5"
-        }}
-        style={styles.ImageBackground_2_969}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a5a1ebfb-bc55-4754-a670-f1714ed95e4e"
+    }} style={styles.ImageBackground_2_968} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fedeb553-8332-47d4-82c0-bb1c7d261bf5"
+    }} style={styles.ImageBackground_2_969} />
       <View style={styles.View_2_971}>
         <Text style={styles.Text_2_971}>(adj.) to be indecisive about</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/902648a3-d020-457c-9d1b-676889b1c68e"
-        }}
-        style={styles.ImageBackground_2_972}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/902648a3-d020-457c-9d1b-676889b1c68e"
+    }} style={styles.ImageBackground_2_972} />
       <View style={styles.View_2_973}>
         <Text style={styles.Text_2_973}>vacillate</Text>
       </View>
@@ -93,13 +54,15 @@ export class Blank extends React.Component {
       <View style={styles.View_2_976}>
         <Text style={styles.Text_2_976}>lollapalooza</Text>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("100%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("100%")
+  },
   View_2_962: {
     width: wp("83%"),
     minHeight: hp("6%"),
@@ -325,12 +288,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

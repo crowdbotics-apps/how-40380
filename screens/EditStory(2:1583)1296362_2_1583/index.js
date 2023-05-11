@@ -1,88 +1,49 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_1584}>
         <Text style={styles.Text_2_1584}>Rythm of the Streets</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/02a01489-4c4a-4003-97b0-d82dc58d30e6"
-        }}
-        style={styles.ImageBackground_2_1585}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/02a01489-4c4a-4003-97b0-d82dc58d30e6"
+    }} style={styles.ImageBackground_2_1585} />
       <View style={styles.View_2_1586}>
         <Text style={styles.Text_2_1586}>Delete</Text>
       </View>
       <View style={styles.View_2_1587}>
         <Text style={styles.Text_2_1587}>Edit Title</Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7fc3c04b-6f43-4f9a-8fd9-3fbfa31d51a4"
-        }}
-        style={styles.TouchableOpacity_2_1588}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1524"))
-        }
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9f5f5e54-06fc-42a3-b4b4-e5b6cb18d1b0"
-        }}
-        style={styles.TouchableOpacity_2_1591}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1492"))
-        }
-      />
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_1593}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1524"))
-        }
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7fc3c04b-6f43-4f9a-8fd9-3fbfa31d51a4"
+    }} style={styles.TouchableOpacity_2_1588} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1524"))} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9f5f5e54-06fc-42a3-b4b4-e5b6cb18d1b0"
+    }} style={styles.TouchableOpacity_2_1591} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1492"))} />
+      <TouchableOpacity style={styles.TouchableOpacity_2_1593} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1524"))} />
       <View style={styles.View_2_1594}>
         <Text style={styles.Text_2_1594}>Save</Text>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(48, 48, 48, 1)" },
-  View_2: { height: hp("100%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(48, 48, 48, 1)"
+  },
+  View_2: {
+    height: hp("100%")
+  },
   View_2_1584: {
     width: wp("74%"),
     minWidth: wp("74%"),
@@ -206,12 +167,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

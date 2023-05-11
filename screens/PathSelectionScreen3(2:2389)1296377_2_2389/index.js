@@ -1,46 +1,24 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_2390}>
         <Text style={styles.Text_2_2390}>Preparing for a test</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9448e389-e956-490a-bdb4-4379ffc6752a"
-        }}
-        style={styles.ImageBackground_2_2391}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9448e389-e956-490a-bdb4-4379ffc6752a"
+    }} style={styles.ImageBackground_2_2391} />
       <View style={styles.View_2_2392} />
       <View style={styles.View_2_2393} />
       <View style={styles.View_2_2394} />
@@ -61,23 +39,12 @@ export class Blank extends React.Component {
       <View style={styles.View_2_2401}>
         <Text style={styles.Text_2_2401}>SAT</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8654e500-a778-465b-b90a-37e7f276d4d3"
-        }}
-        style={styles.ImageBackground_2_2402}
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4cf29d5a-6c35-4b50-95d8-8a6593579cf9"
-        }}
-        style={styles.TouchableOpacity_2_2403}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1004"))
-        }
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8654e500-a778-465b-b90a-37e7f276d4d3"
+    }} style={styles.ImageBackground_2_2402} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4cf29d5a-6c35-4b50-95d8-8a6593579cf9"
+    }} style={styles.TouchableOpacity_2_2403} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1004"))} />
       <View style={styles.View_2_2404}>
         <Text style={styles.Text_2_2404}>Learning new words</Text>
       </View>
@@ -99,13 +66,15 @@ export class Blank extends React.Component {
           in the settings.
         </Text>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("115%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("115%")
+  },
   View_2_2390: {
     width: wp("66%"),
     minWidth: wp("66%"),
@@ -461,12 +430,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

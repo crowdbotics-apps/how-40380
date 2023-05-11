@@ -1,63 +1,27 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9448a364-9ae3-4fe5-acf1-1f7ed42222f9"
-        }}
-        style={styles.TouchableOpacity_2_1493}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2201"))
-        }
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f2a40c46-f54a-4279-bdb8-255c138a359e"
-        }}
-        style={styles.TouchableOpacity_2_1494}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1004"))
-        }
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6c7b2767-fea5-448d-98a1-672a1a5f4574"
-        }}
-        style={styles.ImageBackground_2_1495}
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9448a364-9ae3-4fe5-acf1-1f7ed42222f9"
+    }} style={styles.TouchableOpacity_2_1493} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2201"))} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f2a40c46-f54a-4279-bdb8-255c138a359e"
+    }} style={styles.TouchableOpacity_2_1494} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1004"))} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6c7b2767-fea5-448d-98a1-672a1a5f4574"
+    }} style={styles.ImageBackground_2_1495} />
       <View style={styles.View_2_1496}>
         <Text style={styles.Text_2_1496}>Home</Text>
       </View>
@@ -78,36 +42,14 @@ export class Blank extends React.Component {
       <View style={styles.View_2_1503}>
         <Text style={styles.Text_2_1503}>Rap/Hip-Hop</Text>
       </View>
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_1504}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1563"))
-        }
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1f9cb28d-6d55-45a1-b536-b0c42f4029ba"
-        }}
-        style={styles.TouchableOpacity_2_1505}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1563"))
-        }
-      />
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_1506}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1563"))
-        }
-      >
+      <TouchableOpacity style={styles.TouchableOpacity_2_1504} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1563"))} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1f9cb28d-6d55-45a1-b536-b0c42f4029ba"
+    }} style={styles.TouchableOpacity_2_1505} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1563"))} />
+      <TouchableOpacity style={styles.TouchableOpacity_2_1506} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1563"))}>
         <Text style={styles.Text_2_1506}>Create Story</Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_1507}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1563"))
-        }
-      >
+      <TouchableOpacity style={styles.TouchableOpacity_2_1507} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1563"))}>
         <Text style={styles.Text_2_1507}>
           Create a story using your own words
         </Text>
@@ -118,16 +60,9 @@ export class Blank extends React.Component {
           Genre: Sci-Fi Readability Score: 7/10
         </Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4874f835-17c6-41a7-8936-deba14c391c5"
-        }}
-        style={styles.TouchableOpacity_2_1510}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1436"))
-        }
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4874f835-17c6-41a7-8936-deba14c391c5"
+    }} style={styles.TouchableOpacity_2_1510} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1436"))} />
       <View style={styles.View_2_1511}>
         <Text style={styles.Text_2_1511}>The Tale of a Sentient Computer</Text>
       </View>
@@ -139,34 +74,18 @@ export class Blank extends React.Component {
           the realities of life on the streets.
         </Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/437e497b-29ca-4215-bf4d-615f348f896a"
-        }}
-        style={styles.ImageBackground_2_1513}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4b9c3c7a-4572-4bfb-9903-61618819b765"
-        }}
-        style={styles.ImageBackground_2_1514}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/77a993bc-28ab-486c-a5bc-df5c542db3e8"
-        }}
-        style={styles.ImageBackground_2_1517}
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/39a999c5-a1e0-49ff-8bf6-b0d929ebee5e"
-        }}
-        style={styles.ImageBackground_2_1518}
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/437e497b-29ca-4215-bf4d-615f348f896a"
+    }} style={styles.ImageBackground_2_1513} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4b9c3c7a-4572-4bfb-9903-61618819b765"
+    }} style={styles.ImageBackground_2_1514} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/77a993bc-28ab-486c-a5bc-df5c542db3e8"
+    }} style={styles.ImageBackground_2_1517} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/39a999c5-a1e0-49ff-8bf6-b0d929ebee5e"
+    }} style={styles.ImageBackground_2_1518} />
       <View style={styles.View_2_1520} />
       <View style={styles.View_2_1521}>
         <View style={styles.View_I2_1521_10_2}>
@@ -177,20 +96,12 @@ export class Blank extends React.Component {
         <View style={styles.View_I2_1521_10_4}>
           <View style={styles.View_I2_1521_10_5}>
             <View style={styles.View_I2_1521_10_6}>
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bce068da-f7da-4d9d-9c76-a26b37c5e439"
-                }}
-                style={styles.ImageBackground_I2_1521_10_7}
-              />
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c5004aff-485f-40d5-9f0f-2b8ead87022c"
-                }}
-                style={styles.ImageBackground_I2_1521_10_10}
-              />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bce068da-f7da-4d9d-9c76-a26b37c5e439"
+            }} style={styles.ImageBackground_I2_1521_10_7} />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c5004aff-485f-40d5-9f0f-2b8ead87022c"
+            }} style={styles.ImageBackground_I2_1521_10_10} />
             </View>
             <View style={styles.View_I2_1521_10_11} />
           </View>
@@ -200,32 +111,26 @@ export class Blank extends React.Component {
             <View style={styles.View_I2_1521_10_15} />
             <View style={styles.View_I2_1521_10_16} />
           </View>
-          <ImageBackground
-            source={{
-              uri:
-                "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/751a8c4b-2213-40c5-b959-68f86c94471e"
-            }}
-            style={styles.ImageBackground_I2_1521_10_17}
-          />
+          <ImageBackground source={{
+          uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/751a8c4b-2213-40c5-b959-68f86c94471e"
+        }} style={styles.ImageBackground_I2_1521_10_17} />
         </View>
       </View>
       <View style={styles.View_2_1522}>
         <Text style={styles.Text_2_1522}>GRE Café</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/037dae17-3061-434e-af6f-e4ddc9e59377"
-        }}
-        style={styles.ImageBackground_2_1523}
-      />
-    </ScrollView>
-  )
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/037dae17-3061-434e-af6f-e4ddc9e59377"
+    }} style={styles.ImageBackground_2_1523} />
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("115%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("115%")
+  },
   TouchableOpacity_2_1493: {
     width: wp("7%"),
     height: hp("3%"),
@@ -788,12 +693,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: wp("87%")
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

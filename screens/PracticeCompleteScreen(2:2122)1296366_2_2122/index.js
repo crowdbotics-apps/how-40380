@@ -1,35 +1,17 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_2123} />
       <View style={styles.View_2_2124} />
@@ -41,25 +23,22 @@ export class Blank extends React.Component {
         <Text style={styles.Text_2_2127}>You learnt 20 Words!</Text>
       </View>
       <View style={styles.View_2_2128} />
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_2129}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2132"))
-        }
-      >
+      <TouchableOpacity style={styles.TouchableOpacity_2_2129} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2132"))}>
         <Text style={styles.Text_2_2129}>Practice Set 1 again!</Text>
       </TouchableOpacity>
       <View style={styles.View_2_2130} />
       <View style={styles.View_2_2131}>
         <Text style={styles.Text_2_2131}>Continue to Practice 2</Text>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 0)" },
-  View_2: { height: hp("100%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 0)"
+  },
+  View_2: {
+    height: hp("100%")
+  },
   View_2_2123: {
     width: wp("100%"),
     minWidth: wp("100%"),
@@ -201,12 +180,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     textTransform: "none"
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

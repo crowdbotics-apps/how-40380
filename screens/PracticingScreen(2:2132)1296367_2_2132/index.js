@@ -1,45 +1,22 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_2133}>
         <Text style={styles.Text_2_2133}>loquacious</Text>
       </View>
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_2134}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2147"))
-        }
-      />
+      <TouchableOpacity style={styles.TouchableOpacity_2_2134} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2147"))} />
       <View style={styles.View_2_2135} />
       <View style={styles.View_2_2136} />
       <View style={styles.View_2_2137} />
@@ -55,16 +32,9 @@ export class Blank extends React.Component {
       <View style={styles.View_2_2141}>
         <Text style={styles.Text_2_2141}>strength</Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/39006678-f889-4e0e-9d49-98291c47cf1a"
-        }}
-        style={styles.TouchableOpacity_2_2142}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2201"))
-        }
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/39006678-f889-4e0e-9d49-98291c47cf1a"
+    }} style={styles.TouchableOpacity_2_2142} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2201"))} />
       <View style={styles.View_2_2145}>
         <Text style={styles.Text_2_2145}>Practice Set 1</Text>
       </View>
@@ -77,20 +47,12 @@ export class Blank extends React.Component {
         <View style={styles.View_I2_2146_10_4}>
           <View style={styles.View_I2_2146_10_5}>
             <View style={styles.View_I2_2146_10_6}>
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4c57bd70-bc6a-4729-bb0a-b82291579343"
-                }}
-                style={styles.ImageBackground_I2_2146_10_7}
-              />
-              <ImageBackground
-                source={{
-                  uri:
-                    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f6cbbf10-1af5-47b1-ada2-90679e518b70"
-                }}
-                style={styles.ImageBackground_I2_2146_10_10}
-              />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4c57bd70-bc6a-4729-bb0a-b82291579343"
+            }} style={styles.ImageBackground_I2_2146_10_7} />
+              <ImageBackground source={{
+              uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f6cbbf10-1af5-47b1-ada2-90679e518b70"
+            }} style={styles.ImageBackground_I2_2146_10_10} />
             </View>
             <View style={styles.View_I2_2146_10_11} />
           </View>
@@ -100,22 +62,20 @@ export class Blank extends React.Component {
             <View style={styles.View_I2_2146_10_15} />
             <View style={styles.View_I2_2146_10_16} />
           </View>
-          <ImageBackground
-            source={{
-              uri:
-                "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c0c3981c-5cf4-4703-a9e5-3421aaac6cd4"
-            }}
-            style={styles.ImageBackground_I2_2146_10_17}
-          />
+          <ImageBackground source={{
+          uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c0c3981c-5cf4-4703-a9e5-3421aaac6cd4"
+        }} style={styles.ImageBackground_I2_2146_10_17} />
         </View>
       </View>
-    </ScrollView>
-  )
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(37, 36, 37, 1)" },
-  View_2: { height: hp("115%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(37, 36, 37, 1)"
+  },
+  View_2: {
+    height: hp("115%")
+  },
   View_2_2133: {
     width: wp("48%"),
     minHeight: hp("6%"),
@@ -463,12 +423,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: wp("6%")
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

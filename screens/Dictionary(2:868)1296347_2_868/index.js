@@ -1,35 +1,17 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_869} />
       <View style={styles.View_2_870}>
@@ -41,63 +23,33 @@ export class Blank extends React.Component {
           figures.
         </Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0f0a0eb4-cd61-419c-87c4-befb54e072af"
-        }}
-        style={styles.TouchableOpacity_2_872}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_881"))
-        }
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0132c317-2d6e-42e9-897f-017ab1bda4d3"
-        }}
-        style={styles.TouchableOpacity_2_873}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_881"))
-        }
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/600efe59-92f5-4249-818a-07a8f7f91b46"
-        }}
-        style={styles.TouchableOpacity_2_874}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_881"))
-        }
-      />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0f0a0eb4-cd61-419c-87c4-befb54e072af"
+    }} style={styles.TouchableOpacity_2_872} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_881"))} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0132c317-2d6e-42e9-897f-017ab1bda4d3"
+    }} style={styles.TouchableOpacity_2_873} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_881"))} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/600efe59-92f5-4249-818a-07a8f7f91b46"
+    }} style={styles.TouchableOpacity_2_874} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_881"))} />
       <View style={styles.View_2_875}>
         <Text style={styles.Text_2_875}>eclipse</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/591377a1-e16f-4e13-9b24-bc0c3da319cc"
-        }}
-        style={styles.ImageBackground_2_876}
-      />
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e6ecc862-2064-4688-a506-7062c132867a"
-        }}
-        style={styles.TouchableOpacity_2_879}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_1004"))
-        }
-      />
-    </ScrollView>
-  )
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/591377a1-e16f-4e13-9b24-bc0c3da319cc"
+    }} style={styles.ImageBackground_2_876} />
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e6ecc862-2064-4688-a506-7062c132867a"
+    }} style={styles.TouchableOpacity_2_879} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_1004"))} />
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 0)" },
-  View_2: { height: hp("100%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 0)"
+  },
+  View_2: {
+    height: hp("100%")
+  },
   View_2_869: {
     width: wp("100%"),
     minWidth: wp("100%"),
@@ -218,12 +170,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: wp("84%")
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

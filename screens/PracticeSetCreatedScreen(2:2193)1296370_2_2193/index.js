@@ -1,35 +1,17 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_2194} />
       <View style={styles.View_2_2195}>
@@ -39,23 +21,18 @@ export class Blank extends React.Component {
       <View style={styles.View_2_2197}>
         <Text style={styles.Text_2_2197}>Start Practicing now</Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a1416835-64ff-4f27-8f13-567467079aeb"
-        }}
-        style={styles.TouchableOpacity_2_2198}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2230"))
-        }
-      />
-    </ScrollView>
-  )
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a1416835-64ff-4f27-8f13-567467079aeb"
+    }} style={styles.TouchableOpacity_2_2198} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2230"))} />
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 0)" },
-  View_2: { height: hp("100%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 0)"
+  },
+  View_2: {
+    height: hp("100%")
+  },
   View_2_2194: {
     width: wp("100%"),
     minWidth: wp("100%"),
@@ -131,12 +108,14 @@ const styles = StyleSheet.create({
     left: wp("88%"),
     top: hp("8%")
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);

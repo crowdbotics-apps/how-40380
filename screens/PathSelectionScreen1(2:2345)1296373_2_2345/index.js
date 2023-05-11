@@ -1,35 +1,17 @@
-import React from "react"
-import {
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-  Text,
-  Button,
-  Switch,
-  TextInput,
-  StyleSheet,
-  ScrollView
-} from "react-native"
-import Icon from "react-native-vector-icons/FontAwesome"
-import { CheckBox } from "react-native-elements"
-import { connect } from "react-redux"
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp
-} from "react-native-responsive-screen"
-import { getNavigationScreen } from "@screens"
+import React from "react";
+import { View, ImageBackground, TouchableOpacity, Text, StyleSheet, ScrollView } from "react-native";
+import { connect } from "react-redux";
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+import { getNavigationScreen } from "@screens";
 export class Blank extends React.Component {
   constructor(props) {
-    super(props)
-
-    this.state = {}
+    super(props);
+    this.state = {};
   }
-  render = () => (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1 }}
-      style={styles.ScrollView_1}
-    >
+
+  render = () => <ScrollView contentContainerStyle={{
+    flexGrow: 1
+  }} style={styles.ScrollView_1}>
       <View style={styles.View_2} />
       <View style={styles.View_2_2346}>
         <Text style={styles.Text_2_2346}>Preparing for a test</Text>
@@ -37,19 +19,10 @@ export class Blank extends React.Component {
       <View style={styles.View_2_2347}>
         <Text style={styles.Text_2_2347}>Learning new words</Text>
       </View>
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2b7b37be-aa92-4d63-afc3-ed9c77e6bcd8"
-        }}
-        style={styles.ImageBackground_2_2348}
-      />
-      <TouchableOpacity
-        style={styles.TouchableOpacity_2_2349}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2389"))
-        }
-      />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2b7b37be-aa92-4d63-afc3-ed9c77e6bcd8"
+    }} style={styles.ImageBackground_2_2348} />
+      <TouchableOpacity style={styles.TouchableOpacity_2_2349} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2389"))} />
       <View style={styles.View_2_2350} />
       <View style={styles.View_2_2351} />
       <View style={styles.View_2_2352} />
@@ -87,30 +60,21 @@ export class Blank extends React.Component {
           in the settings.
         </Text>
       </View>
-      <TouchableOpacity
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0126c3ce-b7fa-4c4e-a7ab-8289de4ca6e8"
-        }}
-        style={styles.TouchableOpacity_2_2366}
-        onPress={() =>
-          this.props.navigation.navigate(getNavigationScreen("2_2389"))
-        }
-      />
-      <ImageBackground
-        source={{
-          uri:
-            "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/70f23215-b6b0-42c7-a2cc-bb6c5110990c"
-        }}
-        style={styles.ImageBackground_2_2367}
-      />
-    </ScrollView>
-  )
+      <TouchableOpacity source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0126c3ce-b7fa-4c4e-a7ab-8289de4ca6e8"
+    }} style={styles.TouchableOpacity_2_2366} onPress={() => this.props.navigation.navigate(getNavigationScreen("2_2389"))} />
+      <ImageBackground source={{
+      uri: "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/70f23215-b6b0-42c7-a2cc-bb6c5110990c"
+    }} style={styles.ImageBackground_2_2367} />
+    </ScrollView>;
 }
-
 const styles = StyleSheet.create({
-  ScrollView_1: { backgroundColor: "rgba(0, 0, 0, 1)" },
-  View_2: { height: hp("115%") },
+  ScrollView_1: {
+    backgroundColor: "rgba(0, 0, 0, 1)"
+  },
+  View_2: {
+    height: hp("115%")
+  },
   View_2_2346: {
     width: wp("66%"),
     minWidth: wp("66%"),
@@ -465,12 +429,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: wp("86%")
   }
-})
+});
 
 const mapStateToProps = state => {
-  return {}
-}
+  return {};
+};
+
 const mapDispatchToProps = () => {
-  return {}
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Blank)
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Blank);
